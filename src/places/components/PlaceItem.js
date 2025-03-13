@@ -92,7 +92,8 @@ const PlaceItem = ({id,image,title,address,description,coordinates,onDelete,crea
           </div>
         )}
             <div className="place-item__image">
-                <img src={`${process.env.REACT_APP_ASSET_URL}/${image}`} alt={title} />
+            <img src={image.startsWith('http') ? image : `${process.env.REACT_APP_ASSET_URL}/${image}`} alt={title} />
+
             </div>
             <div className='place-item__info'>
                 <h2>{title}</h2>
