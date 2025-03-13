@@ -50,7 +50,7 @@ const App = () => {
     <Router>
        <MainNavigation />
        <main>
-          <Suspense fallback={<div className='.center_spinner'>
+          <Suspense fallback={<div className='center_spinner'>
             <LoadingSpinner/>
           </div>}>
            {routes}
